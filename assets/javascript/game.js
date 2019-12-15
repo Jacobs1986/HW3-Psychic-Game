@@ -24,3 +24,6 @@ let wordChoice = [
 let wordNumber = Math.floor(Math.random() * 4);
 
 // So far the code is working. Now I need to capture the key events when the player uses the keyboard.
+document.onkeyup = function(event) {
+    console.log(event.key);
+}
