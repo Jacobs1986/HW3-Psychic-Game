@@ -20,8 +20,13 @@ let wordChoice = [
     "Canine"
 ];
 
-//I am going to need a random number generator for this game for numbers between 1 - 4.
+//I am going to need a random number generator for this game for numbers between 0 - 4.
 let wordNumber = Math.floor(Math.random() * 4);
 
-// display number in the console.
-console.log(wordChoice[wordNumber]);
+// So far the code is working. Now I need to capture the key events when the player uses the keyboard.
+function test(event) {
+    var x = KeyboardEvent.which;
+    alert(`You pressed the ${x} key.`);
+};
+
+onkeydown = test(event);
