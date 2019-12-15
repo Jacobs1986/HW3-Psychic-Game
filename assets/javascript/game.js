@@ -24,9 +24,15 @@ let wordChoice = [
 let wordNumber = Math.floor(Math.random() * 4);
 
 // So far the code is working. Now I need to capture the key events when the player uses the keyboard.
-//
+//I'm going to try adding the loop into the onkeyup function
 document.onkeyup = function(event) {
-    console.log(event.key);
+    letter = event.key;
+    console.log(`You pressed the letter: ${letter}`);
+    test = "canine"
+    for (let i = 0; i < test.length; i++) {
+        let letterSearch = test.indexOf(letter, i);
+        console.log(letterSearch);
+    }
 }
 
 /*
