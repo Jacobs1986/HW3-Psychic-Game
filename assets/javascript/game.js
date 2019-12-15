@@ -31,7 +31,12 @@ document.onkeyup = function(event) {
     test = "canine"
     for (let i = 0; i < test.length; i++) {
         let letterSearch = test.indexOf(letter, i);
-        console.log(letterSearch);
+        if (letterSearch == -1) {
+            return console.log("The letter was not found.")
+            ;
+        } else {
+            console.log(`The letter was found at ${letterSearch}.`);
+        }
     }
 }
 
