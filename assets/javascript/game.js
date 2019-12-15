@@ -24,9 +24,3 @@ let wordChoice = [
 let wordNumber = Math.floor(Math.random() * 4);
 
 // So far the code is working. Now I need to capture the key events when the player uses the keyboard.
-function test(event) {
-    var x = KeyboardEvent.which;
-    alert(`You pressed the ${x} key.`);
-};
-
-onkeydown = test(event);
