@@ -23,7 +23,15 @@ let wordChoice = [
 //I am going to need a random number generator for this game for numbers between 0 - 4.
 let wordNumber = Math.floor(Math.random() * 4);
 
+/*
 // So far the code is working. Now I need to capture the key events when the player uses the keyboard.
 document.onkeyup = function(event) {
     console.log(event.key);
 }
+*/
+
+//I now need a way to search for the letters in the string.
+//This is a test one.
+let test = "Canine";
+let testSearch = test.search("");
+console.log(testSearch);
