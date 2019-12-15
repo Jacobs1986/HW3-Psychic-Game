@@ -7,4 +7,5 @@ I need to create a list and a number generator that would randomly pick a word f
 //Test word
 let word = "Programming";
 
-console.log(word);
+// let's use .length to find the length of the string.
+console.log(`The word is ${word} and the length is ${word.length}.`);
