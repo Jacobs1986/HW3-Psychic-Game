@@ -24,4 +24,4 @@ let wordChoice = [
 let wordNumber = Math.floor(Math.random() * 4);
 
 // display number in the console.
-console.log(wordNumber);
+console.log(wordChoice[wordNumber]);
