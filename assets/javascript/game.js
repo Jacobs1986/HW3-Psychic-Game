@@ -33,5 +33,10 @@ document.onkeyup = function(event) {
 //I now need a way to search for the letters in the string.
 //This is a test one.
 let test = "Canine";
-let testSearch = test.search("");
-console.log(testSearch);
+
+//going to create a for loop that will check for the letter more than once
+//the loop
+for (let i = 0; i < test.length; i++) {
+    let testSearch = test.search("n");
+    console.log(testSearch);
+}
