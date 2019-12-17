@@ -27,6 +27,12 @@ selectedWord = wordChoice[wordNumber].toLowerCase();
 console.log(`The chosen word is ${selectedWord}`)
 */
 
+//I need to split the word into an array
+wordArray = (word) => {
+    array = word.split("");
+    console.log(array);
+}
+
 // So far the code is working. Now I need to capture the key events when the player uses the keyboard.
 //I'm going to try adding the loop into the onkeyup function
 
