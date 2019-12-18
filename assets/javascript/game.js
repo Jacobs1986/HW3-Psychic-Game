@@ -33,9 +33,11 @@ wordArray = (word) => {
     console.log(array);
 }
 
-// So far the code is working. Now I need to capture the key events when the player uses the keyboard.
-//I'm going to try adding the loop into the onkeyup function
-
+//Splitting the word into a letter array worked. Now i need to try searching the array and see if it can find letters in it.
+letterSearch = (searchLetter) => {
+    let i = 0;
+    
+}
 
 /*
 test = "Canine".toLowerCase();
