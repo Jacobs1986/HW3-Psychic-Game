@@ -20,11 +20,15 @@ let wordChoice = [
     "Canine"
 ];
 
-/*
 //I am going to need a random number generator for this game for numbers between 0 - 4.
 let wordNumber = Math.floor(Math.random() * 4);
 selectedWord = wordChoice[wordNumber].toLowerCase();
 console.log(`The chosen word is ${selectedWord}`)
-*/
 
+//Now I need to take the word and break it down into letters.
+wordSplitter = () => {
+    letterArray = selectedWord.split("");
+    //The letters will need to be put into an array that can be searched later.
+    return letterArray
+}
 
