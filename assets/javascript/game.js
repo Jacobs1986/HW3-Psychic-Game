@@ -27,17 +27,11 @@ selectedWord = wordChoice[wordNumber].toLowerCase();
 console.log(`The chosen word is ${selectedWord}`)
 */
 
-//I need to split the word into an array
-wordArray = (word) => {
+//Create the array that will contain the letters from the word.
+function wordSearch(word) {
     array = word.split("");
+    return array;
 }
 
-//Splitting the word into a letter array worked. Now i need to try searching the array and see if it can find letters in it.
-
-/*
-test = "Canine".toLowerCase();
-for (let i = 0; i < test.length; i++) {
-    let letterSearch = test.indexOf("c", i);
-    console.log(letterSearch);
-}
-*/
+wordSearch("test");
+console.log(array);
