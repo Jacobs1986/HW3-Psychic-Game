@@ -27,15 +27,4 @@ selectedWord = wordChoice[wordNumber].toLowerCase();
 console.log(`The chosen word is ${selectedWord}`)
 */
 
-//Create the array that will contain the letters from the word.
-function wordSearch(word) {
-    array = word.split("");
-    return array;
-}
 
-wordSearch("hello");
-
-//function that will allow the program to search for the chosen letter in the word.
-function letterSearch(enteredLetter) {
-    
-}
