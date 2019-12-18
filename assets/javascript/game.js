@@ -37,11 +37,5 @@ wordSearch("hello");
 
 //function that will allow the program to search for the chosen letter in the word.
 function letterSearch(enteredLetter) {
-    i = 0;
-    result = 0;
-    while (result !== -1) {
-        result = array.indexOf(enteredLetter, i);
-        console.log(result);
-        i++
-    }
+    
 }
