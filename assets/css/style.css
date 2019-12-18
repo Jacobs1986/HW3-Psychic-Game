@@ -2,6 +2,11 @@ body {
     text-align: center;
 }
 
+.title {
+    background-color: blueviolet;
+    padding: 10px;
+}
+
 .gamedescription {
     margin-bottom: 2%;
 }
