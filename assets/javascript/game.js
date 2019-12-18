@@ -30,14 +30,9 @@ console.log(`The chosen word is ${selectedWord}`)
 //I need to split the word into an array
 wordArray = (word) => {
     array = word.split("");
-    console.log(array);
 }
 
 //Splitting the word into a letter array worked. Now i need to try searching the array and see if it can find letters in it.
-letterSearch = (searchLetter) => {
-    let i = 0;
-    
-}
 
 /*
 test = "Canine".toLowerCase();
