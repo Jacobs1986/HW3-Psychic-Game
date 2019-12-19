@@ -27,13 +27,15 @@ selectedWord = wordChoice[wordNumber].toLowerCase();
 
 //Writing a test function to see if I can get it all to work right.
 function findGuessedLetter(testWord) {
-    let locations = [];
-    let searchFrom = -1;
-    while (testWord.indexOf("i", searchFrom + 1) > -1) {
-        searchFrom = testWord.indexOf("i", searchFrom);
-        locations.push(searchFrom);
+    for (i = 0; i < testWord.length; i++) {
+        let locations = [];
+        let searchFrom = -1;
+        while (testWord.indexOf("n", searchFrom + 1) > -1) {
+            searchFrom = testWord.indexOf("n", searchFrom);
+            locations.push(searchFrom);
+        }
+        return locations;
+        i++;
     }
-    return locations;
 }
 
-console.log(findGuessedLetter("canine"));
