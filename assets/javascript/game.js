@@ -28,7 +28,7 @@ console.log(`The chosen word is ${selectedWord}`);
 let locations = [];
 
 //Writing a test function to see if I can get it all to work right. I am going to need two parameters for this.
-function findGuessedLetter(word, guessedLetter) {
+function findGuessedLetter(word, letter) {
     //I am going to need a loop that will compare a gussed letter to a letter in the word.
     //I'm thinking that maybe changing the word into an array might help.
     let wordArray = word.split("");
@@ -38,10 +38,10 @@ function findGuessedLetter(word, guessedLetter) {
     console.log(locations)
     //From there I would need to create a loop that will compare the guessed word to the index of a word in the array
     //OK so I got the loop working, BUT i'm now having an issue when the same letter is back to back. 
-    let idx = wordArray.indexOf(guessedLetter);
+    let idx = wordArray.indexOf(letter);
     while (idx != -1) {
         locations.push(idx);
-        idx = wordArray.indexOf(guessedLetter, idx + 1);
+        idx = wordArray.indexOf(letter, idx + 1);
     }
 
     //If the word and guessWord match then push the location into the locations array
@@ -52,5 +52,12 @@ function findGuessedLetter(word, guessedLetter) {
 So I got the function for findGuessedLetter working.
 Now I need to get the page to accept keyboard input.
 From there it needs to take the key as the guessedLetter.
-The function will need to 
+The function will need to compare the key event to the letters in the word.
 */
+
+document.onkeyup = function(event) {
+    getLetter = event.key;
+    console.log(`You pressed the letter: ${getLetter}`);
+    findGuessedLetter(selectedWord, getLetter);
+    
+}
