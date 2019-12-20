@@ -60,8 +60,8 @@ document.onkeyup = function(event) {
     console.log(`You pressed the letter: ${getLetter}`);
     findGuessedLetter(selectedWord, getLetter);
     if (locations.length == 0) {
-        console.log("This letter is NOT in the word.")
+        $("#letterGuesses").append(getLetter);
     } else {
-        console.log("This letter is in the word.")
+        $("#wordGuess").append(getLetter);
     }
 }
