@@ -25,14 +25,17 @@ let wordNumber = Math.floor(Math.random() * 4);
 selectedWord = wordChoice[wordNumber].toLowerCase();
 console.log(`The chosen word is ${selectedWord}`);
 
+let locations = [];
+
 //Writing a test function to see if I can get it all to work right. I am going to need two parameters for this.
-function findGuessedLetter(selectedWord, guessedLetter) {
+function findGuessedLetter(word, guessedLetter) {
     //I am going to need a loop that will compare a gussed letter to a letter in the word.
     //I'm thinking that maybe changing the word into an array might help.
-    let wordArray = selectedWord.split("");
+    let wordArray = word.split("");
     console.log(wordArray.length);
     //create an empty locations array
-    let locations = [];
+    locations = [];
+    console.log(locations)
     //From there I would need to create a loop that will compare the guessed word to the index of a word in the array
     //OK so I got the loop working, BUT i'm now having an issue when the same letter is back to back. 
     let idx = wordArray.indexOf(guessedLetter);
@@ -45,3 +48,9 @@ function findGuessedLetter(selectedWord, guessedLetter) {
     return locations
 }
 
+/*
+So I got the function for findGuessedLetter working.
+Now I need to get the page to accept keyboard input.
+From there it needs to take the key as the guessedLetter.
+The function will need to 
+*/
