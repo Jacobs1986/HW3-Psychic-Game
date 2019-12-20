@@ -43,10 +43,10 @@ function findGuessedLetter(word, letter) {
         locations.push(idx);
         idx = wordArray.indexOf(letter, idx + 1);
     }
-
+    console.log(locations.length)
     //If the word and guessWord match then push the location into the locations array
     return locations
-}
+}    
 
 /*
 So I got the function for findGuessedLetter working.
@@ -59,5 +59,9 @@ document.onkeyup = function(event) {
     getLetter = event.key;
     console.log(`You pressed the letter: ${getLetter}`);
     findGuessedLetter(selectedWord, getLetter);
-    
+    if (locations.length == 0) {
+        console.log("This letter is NOT in the word.")
+    } else {
+        console.log("This letter is in the word.")
+    }
 }
