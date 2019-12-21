@@ -21,7 +21,7 @@ let wordChoice = [
 ];
 
 //I am going to need a random number generator for this game for numbers between 0 - 4.
-let wordNumber = Math.floor(Math.random() * 4);
+let wordNumber = Math.floor(Math.random() * wordChoice.length);
 selectedWord = wordChoice[wordNumber].toLowerCase();
 console.log(`The chosen word is ${selectedWord}`);
 console.log(selectedWord.length);
