@@ -50,7 +50,7 @@ function findGuessedLetter(word, letter) {
     console.log(locations.length)
     //If the word and guessWord match then push the location into the locations array
     return locations
-}    
+}
 
 /*
 So I got the function for findGuessedLetter working.
@@ -59,19 +59,27 @@ From there it needs to take the key as the guessedLetter.
 The function will need to compare the key event to the letters in the word.
 */
 
-document.onkeypress = function(event) {
-    getLetter = event.key;
-    console.log(`You pressed the letter: ${getLetter}`);
-    findGuessedLetter(selectedWord, getLetter);
-    if (locations.length == 0) {
-        document.getElementById("letterGuesses").append(getLetter);
-    } else {
-        for (let i = 0; i < locations.length; i++) {
-            wordBox.splice(locations[i], 1, getLetter);
-            document.getElementById("wordGuess").innerHTML = wordBox.join(" ");
+document.onkeypress = function (event) {
+    let getLetter = event.key;
+    let guessesLeft = parseInt(document.getElementById("guessNumber").textContent);
+    let fillCheck = wordBox.includes("_", 0);
+    if (guessesLeft !== 0 && fillCheck == true) {
+        findGuessedLetter(selectedWord, getLetter);
+        if (locations.length == 0) {
+            document.getElementById("letterGuesses").append(getLetter);
+        } else {
+            for (let i = 0; i < locations.length; i++) {
+                wordBox.splice(locations[i], 1, getLetter);
+                document.getElementById("wordGuess").innerHTML = wordBox.join(" ");
+            }
+            fillCheck = wordBox.includes("_", 0);
+            if (fillCheck == false) {
+                document.getElementById("winner").innerHTML = "YOU WIN!"
+            }
+        }
+        document.getElementById("guessNumber").innerHTML = guessesLeft - 1;
+        if (guessesLeft == 1) {
+            document.getElementById("letterGuesses").innerHTML = "YOU LOSE!"
         }
     }
-    convertGuess = parseInt(document.getElementById("guessNumber").textContent);
-    console.log(convertGuess, typeof convertGuess);
-    document.getElementById("guessNumber").innerHTML = convertGuess - 1;
 }
