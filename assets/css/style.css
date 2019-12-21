@@ -3,10 +3,18 @@ body {
 }
 
 .title {
-    background-color: blueviolet;
     padding: 10px;
+}
+
+.title h1 {
+    font-family: 'Press Start 2P', cursive;
+    font-variant: small-caps;
 }
 
 .gamedescription {
     margin-bottom: 2%;
+}
+
+#winner {
+    color: green;
 }

@@ -78,7 +78,7 @@ document.onkeypress = function (event) {
             }
         }
         document.getElementById("guessNumber").innerHTML = guessesLeft - 1;
-        if (guessesLeft == 1) {
+        if (guessesLeft == 1 && fillCheck == true) {
             document.getElementById("letterGuesses").innerHTML = "YOU LOSE!"
         }
     }
