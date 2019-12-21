@@ -84,6 +84,7 @@ document.onkeypress = function (event) {
         if (guessesLeft == 1 && fillCheck == true) {
             document.getElementById("letterGuesses").innerHTML = "You Lose!";
             document.getElementById("letterGuesses").style.color = "red";
+            document.getElementById("wordGuess").innerHTML = selectedWord;
         }
     }
 }
