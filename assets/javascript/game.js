@@ -59,7 +59,7 @@ From there it needs to take the key as the guessedLetter.
 The function will need to compare the key event to the letters in the word.
 */
 
-document.onkeyup = function(event) {
+document.onkeypress = function(event) {
     getLetter = event.key;
     console.log(`You pressed the letter: ${getLetter}`);
     findGuessedLetter(selectedWord, getLetter);
