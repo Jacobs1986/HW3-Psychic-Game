@@ -63,16 +63,12 @@ document.onkeyup = function(event) {
     getLetter = event.key;
     console.log(`You pressed the letter: ${getLetter}`);
     findGuessedLetter(selectedWord, getLetter);
-    console.log(locations);
-    console.log(locations.length);
-    console.log(getLetter);
     if (locations.length == 0) {
-        $("#letterGuesses").append(getLetter);
+        document.getElementById("letterGuesses").append(getLetter);
     } else {
         for (let i = 0; i < locations.length; i++) {
             wordBox.splice(locations[i], 1, getLetter);
-            console.log(wordBox);
-            i++;
+            document.getElementById("wordGuess").innerHTML = wordBox.join(" ");
         }
     }
 }
