@@ -24,6 +24,10 @@ let wordChoice = [
 let wordNumber = Math.floor(Math.random() * 4);
 selectedWord = wordChoice[wordNumber].toLowerCase();
 console.log(`The chosen word is ${selectedWord}`);
+console.log(selectedWord.length);
+wordBox = document.getElementById("wordGuess").innerHTML = "_".repeat(selectedWord.length);
+console.log(wordBox)
+console.log(wordBox.length)
 
 let locations = [];
 
@@ -62,6 +66,6 @@ document.onkeyup = function(event) {
     if (locations.length == 0) {
         $("#letterGuesses").append(getLetter);
     } else {
-        $("#wordGuess").append(getLetter);
+        
     }
 }
