@@ -25,9 +25,9 @@ let wordNumber = Math.floor(Math.random() * 4);
 selectedWord = wordChoice[wordNumber].toLowerCase();
 console.log(`The chosen word is ${selectedWord}`);
 console.log(selectedWord.length);
-wordBox = document.getElementById("wordGuess").innerHTML = "_".repeat(selectedWord.length);
-console.log(wordBox)
-console.log(wordBox.length)
+wordBox = "_".repeat(selectedWord.length).split("");
+console.log(wordBox);
+document.getElementById("wordGuess").innerHTML = wordBox.join(" ");
 
 let locations = [];
 
@@ -63,9 +63,16 @@ document.onkeyup = function(event) {
     getLetter = event.key;
     console.log(`You pressed the letter: ${getLetter}`);
     findGuessedLetter(selectedWord, getLetter);
+    console.log(locations);
+    console.log(locations.length);
+    console.log(getLetter);
     if (locations.length == 0) {
         $("#letterGuesses").append(getLetter);
     } else {
-        
+        for (let i = 0; i < locations.length; i++) {
+            wordBox.splice(locations[i], 1, getLetter);
+            console.log(wordBox);
+            i++;
+        }
     }
 }
