@@ -71,4 +71,7 @@ document.onkeypress = function(event) {
             document.getElementById("wordGuess").innerHTML = wordBox.join(" ");
         }
     }
+    convertGuess = parseInt(document.getElementById("guessNumber").textContent);
+    console.log(convertGuess, typeof convertGuess);
+    document.getElementById("guessNumber").innerHTML = convertGuess - 1;
 }
