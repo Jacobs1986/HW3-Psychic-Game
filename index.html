@@ -25,9 +25,9 @@
 <body>
 
 
-    <div class="container title">
-        <h1>Word Game</h1>
-    </div>
+    
+        <h1 class="title">Guess the Word!</h1>
+    
 
     <div class="container description">
         <h3 class="gamedescription">Try to guess the word before your chances run out!</h3>
@@ -36,14 +36,16 @@
     <div class="container">
         <div class="wordgame">
             <div class="row">
-                <div class="col-md-2"></div>
-                <div class="col-md-4">
+                <div class="col-md-5" id="winBox">
                     <h4 id="wordGuess"></h4>
-                    <h4 id="winner"></h4>
+                    <br>
+                    <h2 id="winner">You Win</h2>
                 </div>
-                <div class="col-md-4">
+                <div class="col-md-2"></div>
+                <div class="col-md-5" id="lossBox">
                     <h4 id="guesses">Guesses left: <span id="guessNumber">12</span></h4>
-                    <h4 id="letterGuesses"></h4>
+                    <br>
+                    <h2 id="lose">You Lose</h2>
                 </div>
             </div>
         </div>

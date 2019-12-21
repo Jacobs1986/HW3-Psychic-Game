@@ -12,16 +12,34 @@ body {
     padding: 10px;
 }
 
-.title h1 {
+h1,
+#winner,
+#lose {
     font-family: 'Press Start 2P', cursive;
     font-variant: small-caps;
+}
+
+.title {
     color: grey;
+    font-size: 60px;
 }
 
 .gamedescription {
     margin-bottom: 2%;
 }
 
+#winBox,
+#lossBox {
+    padding-top: 20px;
+    border-style: groove;
+    border-width: 9px;
+    height: 40em;
+}
+
 #winner {
     color: green;
+}
+
+#lose {
+    color: red;
 }
