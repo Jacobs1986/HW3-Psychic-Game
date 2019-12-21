@@ -14,10 +14,13 @@ console.log(`The word is ${word} and the length is ${word.length}.`);
 
 //Let's create the array that I will need for this game.
 let wordChoice = [
-    "Programmer",
-    "Bootcamp",
-    "Cookie",
-    "Canine"
+    "Rocket",
+    "Astronaut",
+    "Alien",
+    "Space",
+    "Planet",
+    "Sun",
+    "Earth"
 ];
 
 //I am going to need a random number generator for this game for numbers between 0 - 4.
@@ -74,12 +77,13 @@ document.onkeypress = function (event) {
             }
             fillCheck = wordBox.includes("_", 0);
             if (fillCheck == false) {
-                document.getElementById("winner").innerHTML = "YOU WIN!"
+                document.getElementById("winner").innerHTML = "You Win!"
             }
         }
         document.getElementById("guessNumber").innerHTML = guessesLeft - 1;
         if (guessesLeft == 1 && fillCheck == true) {
-            document.getElementById("letterGuesses").innerHTML = "YOU LOSE!"
+            document.getElementById("letterGuesses").innerHTML = "You Lose!";
+            document.getElementById("letterGuesses").style.color = "red";
         }
     }
 }

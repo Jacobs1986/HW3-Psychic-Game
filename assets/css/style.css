@@ -1,11 +1,12 @@
 /*
 font reference from google fonts
-font-family: 'Indie Flower', cursive;
+'Share Tech Mono', monospace;
 font-family: 'Press Start 2P', cursive;
 */
 
 body {
     text-align: center;
+    background-image: url("1-barren-alien-world-space-background-cartoon-clipart.jpg");
 }
 
 .title {
@@ -14,9 +15,15 @@ body {
 
 h1,
 #winner,
-#lose {
+#letterGuesses {
     font-family: 'Press Start 2P', cursive;
     font-variant: small-caps;
+}
+
+h2,
+h3,
+h4 {
+    color: white;
 }
 
 .title {
@@ -36,10 +43,18 @@ h1,
     height: 40em;
 }
 
-#winner {
-    color: green;
+#wordGuess,
+#guesses,
+.gamedescription {
+    font-family: 'Share Tech Mono', monospace;
+    color: yellow;
+    font-weight: bold;
 }
 
-#lose {
+#winner {
+    color: greenyellow;
+}
+
+#loss {
     color: red;
 }
